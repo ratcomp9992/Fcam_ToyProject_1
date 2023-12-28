@@ -12,6 +12,7 @@ public class TripDTO {
     public TripDTO() {
     }
 
+    // TODO JSON 연동으로 다 갈아엎기
     public int getTrip_id() {
         return trip_id;
     }
@@ -24,33 +25,18 @@ public class TripDTO {
         return trip_name;
     }
 
-    public void setTrip_name(String trip_name) {
-        this.trip_name = trip_name;
-    }
-
     public String getStart_date() {
         return start_date;
-    }
-
-    public void setStart_date(String start_date) {
-        this.start_date = start_date;
     }
 
     public String getEnd_date() {
         return end_date;
     }
 
-    public void setEnd_date(String end_date) {
-        this.end_date = end_date;
-    }
-
     public ItineraryDTO[] getItineraries() {
         return itineraries;
     }
 
-    public void setItineraries(ItineraryDTO[] itineraries) {
-        this.itineraries = itineraries;
-    }
 
     //TODO 여정 정보?
     @Override
