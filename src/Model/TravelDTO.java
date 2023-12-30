@@ -1,28 +1,30 @@
 package Model;
 
-public class TripDTO {
-    private int trip_id;
-    private String trip_name;
-    private String start_date;
-    private String end_date;
+public class TravelDTO {
+    private int travel_id;
+    private final String travel_name;
+    private final String start_date;
+    private final String end_date;
 
     private ItineraryDTO[] itineraries;
     // TODO ArrayList?
 
-    public TripDTO() {
+    public TravelDTO(String travel_name, String start_date, String end_date) {
+        this.travel_name = travel_name;
+        this.start_date = start_date;
+        this.end_date = end_date;
     }
 
-    // TODO JSON 연동으로 다 갈아엎기
     public int getTrip_id() {
-        return trip_id;
+        return travel_id;
     }
 
-    public void setTrip_id(int trip_id) {
-        this.trip_id = trip_id;
+    public void setTrip_id(int travel_id) {
+        this.travel_id = travel_id;
     }
 
     public String getTrip_name() {
-        return trip_name;
+        return travel_name;
     }
 
     public String getStart_date() {
@@ -42,8 +44,8 @@ public class TripDTO {
     @Override
     public String toString() {
         return "TripDTO{" +
-                "trip_id=" + trip_id +
-                ", trip_name=" + trip_name +
+                "trip_id=" + travel_id +
+                ", trip_name=" + travel_name +
                 ", start_date=" + start_date +
                 ", end_date=" + end_date +
                 '}';
